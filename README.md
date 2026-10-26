@@ -1,56 +1,50 @@
-# Welcome to your Expo app 👋
+# IT 313 - Lab Timer & Practice Tracker
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Problem
 
-## Get started
+Students need an application to track solved practice problems
+and the time spent working during laboratory sessions.
 
-1. Install dependencies
+## Features
 
-   ```bash
-   npm install
-   ```
+- Increment the solved counter.
+- Reset the solved counter without resetting the timer.
+- Display "Great job!" after solving five problems.
+- Start and stop the stopwatch.
+- Display elapsed time in MM:SS format.
+- Display Running or Paused status.
 
-2. Start the app
+## React Concepts
 
-   ```bash
-   npx expo start
-   ```
+- useState: Manages application state.
+- useEffect: Runs the stopwatch interval.
+- Cleanup function: Clears the interval.
+- Conditional rendering: Displays messages based on state.
+- Event handling: Responds to button presses.
+- Lifting state up: Shares state through the parent component.
+- Custom hook: useStopwatch manages timer logic.
 
-In the output, you'll find options to open the app in a
+## Project Structure
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- App.js
+- components/PracticeTracker.js
+- components/Stopwatch.js
+- hooks/useStopwatch.js
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## How to Run
 
-## Get a fresh project
+1. Install Node.js and npm.
+2. Open a terminal in the project folder.
+3. Run npm install.
+4. Run npx expo start.
+5. Open Expo Go on your phone.
+6. Scan the QR code.
 
-When you're ready, run:
+## Testing
 
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-### Other setup steps
-
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+1. Verify the initial counter is zero.
+2. Solve five problems and verify "Great job!" appears.
+3. Reset the counter.
+4. Start the stopwatch and verify it counts up.
+5. Stop the stopwatch and verify it pauses.
+6. Verify that Reset does not affect the timer.
